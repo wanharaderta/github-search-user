@@ -51,7 +51,7 @@ class UsersAdapter : RecyclerView.Adapter<UsersAdapter.ViewHolder>() {
     }
 
     fun clearItems() {
-        this.usersList = usersList
+        this.usersList.clear()
         notifyDataSetChanged()
     }
 

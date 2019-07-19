@@ -28,7 +28,6 @@ class SearchActivity : BaseActivity(), SearchContract.View{
     var query:String=""
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AndroidInjection.inject(this)
