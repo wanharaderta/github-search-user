@@ -96,7 +96,7 @@ class SearchActivity : BaseActivity(), SearchContract.View{
             usersAdapter.setItemsToList(response)
         else{
             usersAdapter.clearItems()
-            Toast.makeText(this, "Maaf user yang anda cari tidak ada", Toast.LENGTH_LONG)
+            Toast.makeText(this, "Maaf username $query tidak ditemukan", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -107,7 +107,7 @@ class SearchActivity : BaseActivity(), SearchContract.View{
 
     @SuppressLint("ShowToast")
     override fun showErrorMessage(localizedMessage: String?) {
-        Toast.makeText(this, localizedMessage, Toast.LENGTH_LONG)
+        Toast.makeText(this, localizedMessage, Toast.LENGTH_LONG).show()
         itShouldLoadMore = true
     }
 
